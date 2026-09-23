@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthy Choice | Petualangan Kebiasaan Sehat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sky-decor cloud-one">☁️</div>
+    <div class="sky-decor cloud-two">☁️</div>
+    <div class="sky-decor sun">☀️</div>
+    <div class="leaf leaf-one">🍃</div>
+    <div class="leaf leaf-two">🌿</div>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-icon">🥦</div>
+          <div>
+            <p class="eyebrow">Petualangan kebiasaan baik</p>
+            <h1>Healthy <span>Choice</span></h1>
+          </div>
+        </div>
+        <button id="restartBtn" class="icon-btn" type="button" title="Mulai ulang permainan" aria-label="Mulai ulang permainan">↻</button>
+      </header>
+
+      <section class="hero-panel">
+        <div class="hero-copy">
+          <p class="kicker">Misi hari ini <span>✦</span></p>
+          <h2>Jadikan pilihan kecilmu<br /><em>lebih sehat!</em></h2>
+          <p class="hero-description">Pilih kebiasaan yang membantu tubuh dan pikiranmu tetap ceria. Setiap keputusan punya cerita.</p>
+        </div>
+        <div class="mascot" aria-label="Maskot wortel tersenyum" role="img">🥕</div>
+        <div class="hero-stickers" aria-hidden="true"><span>💧</span><span>💪</span><span>🍎</span></div>
+      </section>
+
+      <section class="progress-area" aria-label="Kemajuan permainan">
+        <div class="progress-heading">
+          <div><span class="label">LEVEL</span><strong id="levelValue">1</strong><span id="levelName">Pemula Sehat</span></div>
+          <div class="score-pill">⭐ <strong id="scoreValue">0</strong> poin</div>
+        </div>
+        <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+        <div class="progress-caption"><span id="progressText">0 dari 8 pilihan selesai</span><span>Target: <strong>800 poin</strong></span></div>
+      </section>
+
+      <section class="game-card" aria-live="polite">
+        <div class="round-row"><span class="round-badge" id="roundBadge">PILIHAN 1</span><span class="category-label" id="categoryLabel">Awal Hari</span></div>
+        <h3 id="questionText">Alarm berbunyi. Apa yang kamu lakukan?</h3>
+        <p id="questionHint" class="question-hint">Pilihan terbaik membuat harimu terasa lebih siap.</p>
+        <div id="choiceList" class="choice-list"></div>
+        <div id="feedback" class="feedback" hidden></div>
+        <button id="nextBtn" class="next-btn" type="button" hidden>Lanjutkan <span>→</span></button>
+      </section>
+
+      <section class="tip-strip"><span class="tip-icon">💡</span><p><strong>Tip sehat:</strong> Kebiasaan kecil yang dilakukan setiap hari bisa membawa perubahan besar.</p></section>
+
+      <footer><span>Healthy Choice</span><span class="dot">•</span><span>Rawat dirimu, satu pilihan dalam satu waktu 🌈</span></footer>
+    </main>
+
+    <div id="resultModal" class="modal-backdrop" hidden>
+      <section class="result-modal" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
+        <div class="trophy">🏆</div>
+        <p class="kicker">Perjalanan selesai!</p>
+        <h2 id="resultTitle">Kamu keren sekali!</h2>
+        <p id="resultMessage"></p>
+        <div class="final-score"><span>Skor akhir</span><strong id="finalScore">0</strong><small>poin sehat</small></div>
+        <button id="playAgainBtn" class="next-btn" type="button">Main lagi <span>↻</span></button>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
